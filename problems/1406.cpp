@@ -33,7 +33,7 @@ int main()
         {   
             if(pos == 0)
                 continue;
-            str.erase(pos-1, pos); //일부 문자를 지운다. 
+            str.erase(pos-1, 1); //일부 문자를 지운다. 
             pos--;
         }
         else if(temp == "D")
@@ -41,9 +41,9 @@ int main()
             if(pos != str.size())
                 pos++;
         }
+       
     }
     cout << str << '\n';
-
     return 0;
 
 }
