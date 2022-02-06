@@ -9,28 +9,22 @@ int main() {
  
     start = clock();
     
-    int M, N;
-    scanf("%d %d", &M, &N);
-    for(int i = 2; i < N + 1; i++)
+    cin.tie(NULL); ios_base::sync_with_stdio(0);
+
+    int n = 1;
+    int left, right;
+    for(int i = 2; i < 1000001; i++)
     {
        mat[i] = i;
     }
-    for(int i = 2; i < N + 1; i++)
+    for(int i = 2; i < 1000001; i++)
     {
         if(mat[i] == 0)
             continue;
-        for(int j = i + i; j < N + 1; j += i)
+        for(int j = i + i; j < 1000001; j += i)
             mat[j] = 0;
     }
-
-    for(int i = M; i < N; i++)
-    {
-        if(i == 1 || i == 0)
-            continue;
-        if(mat[i] != 0)
-            printf("%d\n", mat[i]);
-    }
-
+    //에라토스테네스의 채를 통해서 홀수를 쭉 구한다. 
  
     finish = clock();
  
